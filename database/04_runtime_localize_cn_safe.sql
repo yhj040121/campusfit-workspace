@@ -1,0 +1,5 @@
+SET NAMES utf8mb4;
+UPDATE post p JOIN post s ON s.id = 1 SET p.title = s.title, p.subtitle = s.subtitle, p.description = s.description, p.scene_tag = s.scene_tag, p.style_tag = s.style_tag, p.budget_tag = s.budget_tag, p.cover_tag = s.cover_tag WHERE p.id = 7;
+UPDATE product_link p JOIN product_link s ON s.id = 1 SET p.product_name = s.product_name, p.platform_name = s.platform_name, p.profit_label = s.profit_label, p.guide_tip = s.guide_tip WHERE p.id = 7;
+UPDATE message_notification SET message_type = CONVERT(0xe7b3bbe7bb9fe9809ae79fa5 USING utf8mb4), title = CONVERT(0xe4bda0e79a84e7a9bfe690ade5b7b2e58f91e5b883 USING utf8mb4), content = CONCAT(CONVERT(0xe4bda0e79a84e7a9bfe690ade3808a USING utf8mb4), (SELECT title FROM post WHERE id = 7), CONVERT(0xe3808be5b7b2e58aa0e585a5e58685e5aeb9e7aea1e79086e58897e8a1a8e38082 USING utf8mb4)) WHERE id = 6;
+UPDATE message_notification SET message_type = CONVERT(0xe4ba92e58aa8e9809ae79fa5 USING utf8mb4), title = CONVERT(0xe4bda0e69c89e4b880e4bd8de696b0e7b289e4b89d USING utf8mb4), content = CONVERT(0xe69c89e6a0a1e59bade794a8e688b7e585b3e6b3a8e4ba86e4bda0e79a84e4b8bbe9a1b5e38082 USING utf8mb4) WHERE id IN (7, 8, 9);

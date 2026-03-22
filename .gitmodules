@@ -1,0 +1,9 @@
+[submodule "admin-web"]
+	path = admin-web
+	url = https://github.com/yhj040121/campusfit-admin-web.git
+[submodule "backend-java"]
+	path = backend-java
+	url = https://github.com/yhj040121/campusfit-backend.git
+[submodule "mobile-uniapp"]
+	path = mobile-uniapp
+	url = https://github.com/yhj040121/campusfit-uniapp.git
