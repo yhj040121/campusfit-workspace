@@ -7,10 +7,12 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS report_record;
 DROP TABLE IF EXISTS message_notification;
 DROP TABLE IF EXISTS commission_record;
+DROP TABLE IF EXISTS creator_withdraw_request;
 DROP TABLE IF EXISTS creator_cooperation;
 DROP TABLE IF EXISTS promotion_slot;
 DROP TABLE IF EXISTS campaign;
 DROP TABLE IF EXISTS merchant;
+DROP TABLE IF EXISTS post_draft;
 DROP TABLE IF EXISTS post_activity_binding;
 DROP TABLE IF EXISTS user_activity_join;
 DROP TABLE IF EXISTS official_announcement;
@@ -155,6 +157,7 @@ CREATE TABLE activity_topic (
     scene_label VARCHAR(50),
     status_code VARCHAR(20) NOT NULL DEFAULT 'ONGOING',
     featured_flag TINYINT NOT NULL DEFAULT 0,
+    publish_selectable_flag TINYINT NOT NULL DEFAULT 1,
     heat_value INT NOT NULL DEFAULT 0,
     sort_order INT NOT NULL DEFAULT 0,
     status TINYINT NOT NULL DEFAULT 1,

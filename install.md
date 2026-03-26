@@ -451,6 +451,7 @@ Content:
 server {
     listen 80;
     server_name admin.your-domain.com;
+    client_max_body_size 20m;
 
     root /var/www/campusfit-admin;
     index index.html;
@@ -463,6 +464,7 @@ server {
 server {
     listen 80;
     server_name api.your-domain.com;
+    client_max_body_size 20m;
 
     location / {
         proxy_pass http://127.0.0.1:8080;
@@ -654,4 +656,3 @@ Prices and rules can change. Re-check before paying.
 - Tencent Cloud Lighthouse page: `https://cloud.tencent.com/product/lighthouse`
 - Tencent Cloud Lighthouse promo page: `https://cloud.tencent.com/act/pro/lhsale`
 - Tencent Cloud ICP filing overview: `https://cloud.tencent.com/document/product/243`
-

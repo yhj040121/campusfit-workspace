@@ -7,3 +7,6 @@
 [submodule "mobile-uniapp"]
 	path = mobile-uniapp
 	url = https://github.com/yhj040121/campusfit-uniapp.git
+[submodule "web"]
+	path = web
+	url = https://github.com/yhj040121/campusfit-web.git
