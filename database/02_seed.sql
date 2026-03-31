@@ -77,15 +77,38 @@ INSERT INTO post_comment (id, post_id, user_id, content, like_count, status, cre
     (3, 1, 4, '如果换成运动鞋，会不会更适合早八？', 8, 1, DATE_SUB(NOW(), INTERVAL 18 MINUTE)),
     (4, 2, 1, '这套确实很适合社团活动拍照。', 10, 1, DATE_SUB(NOW(), INTERVAL 1 HOUR));
 
-INSERT INTO creator_cooperation (id, user_id, merchant_id, cooperation_title, cooperation_status, reward_amount, created_at) VALUES
-    (1, 1, 1, '春季清爽校园穿搭专题', 0, 120.00, DATE_SUB(NOW(), INTERVAL 7 DAY)),
-    (2, 1, 2, '平价通勤基础款合作', 1, 88.00, DATE_SUB(NOW(), INTERVAL 5 DAY)),
-    (3, 1, 3, '社团与运动场景穿搭专题', 1, 60.00, DATE_SUB(NOW(), INTERVAL 3 DAY));
+INSERT INTO creator_cooperation (
+    id, cooperation_code, user_id, merchant_id, cooperation_title, cooperation_desc, cooperation_mode,
+    cooperation_status, reward_amount, target_post_count, deadline_at, accepted_at, created_at, updated_at
+) VALUES
+    (
+        1, 'coop-spring-campus', 1, 1, '春季清爽校园穿搭专题',
+        '管理员发起的春季专题合作，确认后可绑定 1 条通过审核的校园穿搭内容。',
+        'PLATFORM_INVITE', 0, 120.00, 1,
+        DATE_ADD(NOW(), INTERVAL 10 DAY), NULL,
+        DATE_SUB(NOW(), INTERVAL 7 DAY), DATE_SUB(NOW(), INTERVAL 7 DAY)
+    ),
+    (
+        2, 'coop-budget-commute', 1, 2, '平价通勤基础款合作',
+        '面向通勤场景的基础款合作，确认后发布绑定内容即可进入审核与发奖流程。',
+        'PLATFORM_INVITE', 1, 88.00, 1,
+        DATE_ADD(NOW(), INTERVAL 7 DAY), DATE_SUB(NOW(), INTERVAL 5 DAY),
+        DATE_SUB(NOW(), INTERVAL 5 DAY), DATE_SUB(NOW(), INTERVAL 2 DAY)
+    ),
+    (
+        3, 'coop-club-sports', 1, 3, '社团与运动场景穿搭专题',
+        '面向社团与运动场景的合作专题，支持继续绑定并追踪合作进度。',
+        'PLATFORM_INVITE', 1, 60.00, 1,
+        DATE_ADD(NOW(), INTERVAL 14 DAY), DATE_SUB(NOW(), INTERVAL 3 DAY),
+        DATE_SUB(NOW(), INTERVAL 3 DAY), DATE_SUB(NOW(), INTERVAL 1 DAY)
+    );
 
-INSERT INTO commission_record (id, post_id, user_id, income_type, commission_amount, settlement_status, created_at) VALUES
-    (1, 1, 1, '导购佣金', 86.50, 1, DATE_SUB(NOW(), INTERVAL 6 DAY)),
-    (2, 5, 1, '品牌分成', 92.00, 1, DATE_SUB(NOW(), INTERVAL 3 DAY)),
-    (3, 1, 1, '导购佣金', 89.50, 0, DATE_SUB(NOW(), INTERVAL 1 DAY));
+INSERT INTO commission_record (
+    id, post_id, user_id, cooperation_id, income_type, commission_amount, settlement_status, remark, created_at
+) VALUES
+    (1, 1, 1, NULL, '导购佣金', 86.50, 1, '首页导购点击结算', DATE_SUB(NOW(), INTERVAL 6 DAY)),
+    (2, 5, 1, NULL, '品牌分成', 92.00, 1, '品牌推广收益结算', DATE_SUB(NOW(), INTERVAL 3 DAY)),
+    (3, 1, 1, NULL, '导购佣金', 89.50, 0, '待财务确认结算', DATE_SUB(NOW(), INTERVAL 1 DAY));
 
 INSERT INTO message_notification (id, user_id, message_type, title, content, read_status, created_at) VALUES
     (1, 1, '互动', '你的穿搭新增了 18 个收藏', '图书馆那套搭配还在持续获得曝光，建议补充更多亮点标签。', 0, DATE_SUB(NOW(), INTERVAL 1 MINUTE)),

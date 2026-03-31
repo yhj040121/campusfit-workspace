@@ -216,6 +216,7 @@ CREATE TABLE post_draft (
     product_link VARCHAR(500),
     product_price DECIMAL(10,2),
     activity_code VARCHAR(50),
+    cooperation_code VARCHAR(50),
     status TINYINT NOT NULL DEFAULT 1,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -299,12 +300,21 @@ CREATE TABLE campaign (
 
 CREATE TABLE creator_cooperation (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    cooperation_code VARCHAR(50) NOT NULL UNIQUE,
     user_id BIGINT NOT NULL,
     merchant_id BIGINT NOT NULL,
     cooperation_title VARCHAR(120) NOT NULL,
+    cooperation_desc VARCHAR(500),
+    cooperation_mode VARCHAR(30) NOT NULL DEFAULT 'PLATFORM_INVITE',
     cooperation_status TINYINT NOT NULL DEFAULT 0,
     reward_amount DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    target_post_count INT NOT NULL DEFAULT 1,
+    deadline_at DATETIME,
+    accepted_at DATETIME,
+    reward_issued_at DATETIME,
+    settled_at DATETIME,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT fk_creator_cooperation_user FOREIGN KEY (user_id) REFERENCES app_user(id),
     CONSTRAINT fk_creator_cooperation_merchant FOREIGN KEY (merchant_id) REFERENCES merchant(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -313,10 +323,13 @@ CREATE TABLE commission_record (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     post_id BIGINT NOT NULL,
     user_id BIGINT NOT NULL,
+    cooperation_id BIGINT,
     income_type VARCHAR(50) NOT NULL,
     commission_amount DECIMAL(10,2) NOT NULL DEFAULT 0.00,
     settlement_status TINYINT NOT NULL DEFAULT 0,
+    remark VARCHAR(255),
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    KEY idx_commission_record_cooperation (cooperation_id),
     CONSTRAINT fk_commission_record_post FOREIGN KEY (post_id) REFERENCES post(id),
     CONSTRAINT fk_commission_record_user FOREIGN KEY (user_id) REFERENCES app_user(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
