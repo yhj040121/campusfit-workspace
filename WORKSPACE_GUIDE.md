@@ -1,4 +1,4 @@
-# CampusFit Workspace Guide
+# 青搭 Workspace Guide
 
 ## Project Layout
 
@@ -7,8 +7,8 @@
 - `backend-java/`: Java backend service based on JDK 21
 - `admin-web/`: admin dashboard built with Vue 3 + Element Plus
 - `database/`: MySQL schema and seed scripts
-- `CampusFit_PRD.md`: user-side product PRD
-- `CampusFit_Admin_PRD.md`: admin-side product PRD
+- user-side product PRD for 青搭
+- admin-side product PRD for 青搭
 
 ## Recommended Startup Order
 

@@ -1,4 +1,4 @@
-﻿SET NAMES utf8mb4;
+SET NAMES utf8mb4;
 START TRANSACTION;
 
 SET @demo_password_hash = NULL;
@@ -23,7 +23,7 @@ INSERT INTO user_profile (
 DELETE FROM message_notification WHERE user_id = @user_chen;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
 VALUES
-    (@user_chen, '系统通知', '欢迎来到 CampusFit', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
+    (@user_chen, '系统通知', '欢迎来到青搭', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
     (@user_chen, '运营通知', '演示账号已准备就绪', '这是一套偏学院风和通勤场景的演示人设，适合展示首页内容浏览与个人主页。', 0, NOW());
 
 INSERT INTO app_user (phone, nickname, avatar_url, password_hash, status, created_at, updated_at)
@@ -46,7 +46,7 @@ INSERT INTO user_profile (
 DELETE FROM message_notification WHERE user_id = @user_zhou;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
 VALUES
-    (@user_zhou, '系统通知', '欢迎来到 CampusFit', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
+    (@user_zhou, '系统通知', '欢迎来到青搭', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
     (@user_zhou, '运营通知', '演示账号已准备就绪', '这是一套偏运动社团场景的演示人设，适合展示活动中心和消息通知。', 0, NOW());
 
 INSERT INTO app_user (phone, nickname, avatar_url, password_hash, status, created_at, updated_at)
@@ -69,7 +69,7 @@ INSERT INTO user_profile (
 DELETE FROM message_notification WHERE user_id = @user_lin;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
 VALUES
-    (@user_lin, '系统通知', '欢迎来到 CampusFit', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
+    (@user_lin, '系统通知', '欢迎来到青搭', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
     (@user_lin, '运营通知', '演示账号已准备就绪', '这是一套偏低饱和审美和研究生日常的人设，适合展示搜索与收藏场景。', 0, NOW());
 
 INSERT INTO app_user (phone, nickname, avatar_url, password_hash, status, created_at, updated_at)
@@ -92,7 +92,7 @@ INSERT INTO user_profile (
 DELETE FROM message_notification WHERE user_id = @user_xu;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
 VALUES
-    (@user_xu, '系统通知', '欢迎来到 CampusFit', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
+    (@user_xu, '系统通知', '欢迎来到青搭', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
     (@user_xu, '运营通知', '演示账号已准备就绪', '这是一套偏预算友好和实习通勤的人设，适合展示搜索筛选与个人主页。', 0, NOW());
 
 INSERT INTO app_user (phone, nickname, avatar_url, password_hash, status, created_at, updated_at)
@@ -115,7 +115,7 @@ INSERT INTO user_profile (
 DELETE FROM message_notification WHERE user_id = @user_song;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
 VALUES
-    (@user_song, '系统通知', '欢迎来到 CampusFit', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
+    (@user_song, '系统通知', '欢迎来到青搭', '你的演示账号已经准备完成，可以直接查看个人资料、关注关系和消息列表。', 0, NOW()),
     (@user_song, '运营通知', '演示账号已准备就绪', '这是一套偏功能性单品和理工科校园场景的人设，适合展示通勤与收藏场景。', 0, NOW());
 
 DELETE FROM user_follow
