@@ -20,12 +20,7 @@ CREATE TABLE IF NOT EXISTS product_link_click (
 
 UPDATE product_link
 SET
-    profit_label = CASE
-        WHEN COALESCE(is_partner_product, 0) = 0 THEN '品牌合作分成'
-        WHEN commission_rate >= 8.00 THEN '平台导购佣金 8%'
-        WHEN commission_rate >= 6.00 THEN '平台导购佣金 6%'
-        ELSE '平台导购佣金 5%'
-    END,
+    profit_label = COALESCE(NULLIF(profit_label, ''), '导购点击会进入创作者激励统计。'),
     guide_tip = '请结合预算、使用频率和场景需求理性选购。'
 WHERE id > 0;
 

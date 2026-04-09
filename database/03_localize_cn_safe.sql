@@ -1,4 +1,4 @@
-SET NAMES utf8mb4;
+﻿SET NAMES utf8mb4;
 UPDATE app_user SET nickname = CONVERT(0xe4b994e4b994 USING utf8mb4) WHERE id = 1;
 UPDATE app_user SET nickname = CONVERT(0xe69e97e5a48f USING utf8mb4) WHERE id = 2;
 UPDATE app_user SET nickname = CONVERT(0xe9b9bfe5ae81 USING utf8mb4) WHERE id = 3;
@@ -67,8 +67,3 @@ UPDATE message_notification SET message_type = CONVERT(0xe59088e4bd9c USING utf8
 UPDATE message_notification SET message_type = CONVERT(0xe7b3bbe7bb9f USING utf8mb4), title = CONVERT(0xe59586e59381e993bee68ea5e5aea1e6a0b8e5b7b2e9809ae8bf87 USING utf8mb4), content = CONVERT(0xe4bda0e68f90e4baa4e79a84e5afbce8b4ade993bee68ea5e5b7b2e9809ae8bf87e5aea1e6a0b8efbc8ce78eb0e59ca8e58fafe4bba5e58f82e4b88ee4bda3e98791e7bb9fe8aea1e38082 USING utf8mb4) WHERE id = 3;
 UPDATE message_notification SET message_type = CONVERT(0xe8af84e8aeba USING utf8mb4), title = CONVERT(0xe9b9bfe5ae81e8af84e8aebae4ba86e4bda0e79a84e7a9bfe690ad USING utf8mb4), content = CONVERT(0xe5a5b9e683b3e79c8b2031303020e58583e9a284e7ae97e4bba5e58685e79a84e69bb4e5a49ae690ade9858de5bbbae8aeaee38082 USING utf8mb4) WHERE id = 4;
 UPDATE message_notification SET message_type = CONVERT(0xe694b6e79b8a USING utf8mb4), title = CONVERT(0xe69cace591a8e5afbce8b4ade694b6e79b8ae6ada3e59ca8e7bb93e7ae97 USING utf8mb4), content = CONVERT(0xe4bda0e69cace591a8e79a84e5afbce8b4ade58685e5aeb9e9a284e8aea1e7bb93e7ae972038362e353020e58583efbc8ce58fafe5898de5be80e5889be4bd9ce88085e694b6e79b8ae4b8ade5bf83e69fa5e79c8be38082 USING utf8mb4) WHERE id = 5;
-UPDATE promotion_slot SET slot_name = CONVERT(0xe9a696e9a1b5e4b8bbe8a786e8a789e68ea8e5b9bfe4bd8d USING utf8mb4) WHERE id = 1;
-UPDATE promotion_slot SET slot_name = CONVERT(0xe6909ce7b4a2e783ade8af8de68ea8e5b9bfe4bd8d USING utf8mb4) WHERE id = 2;
-UPDATE campaign SET campaign_name = CONVERT(0xe698a5e5ada3e696b0e7949fe7a9bfe690ade68c87e58d97 USING utf8mb4), campaign_type = CONVERT(0xe58685e5aeb9e4b893e9a298 USING utf8mb4) WHERE id = 1;
-UPDATE campaign SET campaign_name = CONVERT(0xe7a4bee59ba2e6b4bbe58a9be7a9bfe690ade591a8 USING utf8mb4), campaign_type = CONVERT(0xe59381e7898ce6b4bbe58aa8 USING utf8mb4) WHERE id = 2;
-UPDATE report_record SET reason = CONVERT(0xe6bc94e7a4bae794a8e58685e5aeb9e6b2bbe79086e6a0b7e4be8b USING utf8mb4) WHERE id = 1;

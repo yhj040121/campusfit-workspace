@@ -14,8 +14,6 @@ WHERE user_id IN (4, 5, 6, 7, 8)
 DELETE FROM creator_withdraw_request WHERE id BETWEEN 2261 AND 2265;
 DELETE FROM commission_record WHERE id BETWEEN 2241 AND 2250;
 DELETE FROM creator_cooperation WHERE id BETWEEN 2231 AND 2238;
-DELETE FROM campaign WHERE id BETWEEN 2221 AND 2226;
-DELETE FROM promotion_slot WHERE id BETWEEN 2211 AND 2214;
 DELETE FROM merchant WHERE id IN (2201, 2202, 2203, 2204);
 DELETE FROM post_image WHERE id BETWEEN 2101 AND 2118;
 
@@ -63,20 +61,6 @@ INSERT INTO merchant (id, merchant_name, contact_name, contact_phone, cooperatio
     (2202, '松弛通勤实验室', 'Allen', '13800022002', 1, '聚焦学生通勤、实习切换和基础款复穿。', DATE_SUB(NOW(), INTERVAL 18 DAY)),
     (2203, '青柚运动局', 'Cici', '13800022003', 1, '主打社团招新、操场活动和轻运动混搭。', DATE_SUB(NOW(), INTERVAL 16 DAY)),
     (2204, '雾岚质感选物', 'Rita', '13800022004', 0, '偏低饱和审美的女生日常与约会合作线。', DATE_SUB(NOW(), INTERVAL 12 DAY));
-
-INSERT INTO promotion_slot (id, slot_name, slot_position, merchant_id, start_time, end_time, status, created_at) VALUES
-    (2211, '首页编辑推荐位', 'home_editorial', 2201, DATE_SUB(NOW(), INTERVAL 2 DAY), DATE_ADD(NOW(), INTERVAL 5 DAY), 1, DATE_SUB(NOW(), INTERVAL 2 DAY)),
-    (2212, '活动页通勤专题位', 'activity_commute', 2202, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_ADD(NOW(), INTERVAL 6 DAY), 1, DATE_SUB(NOW(), INTERVAL 1 DAY)),
-    (2213, '社团热搜词联动位', 'search_club', 2203, NOW(), DATE_ADD(NOW(), INTERVAL 4 DAY), 1, NOW()),
-    (2214, '低饱和灵感预热位', 'home_softtone', 2204, DATE_ADD(NOW(), INTERVAL 2 DAY), DATE_ADD(NOW(), INTERVAL 10 DAY), 0, NOW());
-
-INSERT INTO campaign (id, campaign_name, campaign_type, merchant_id, start_time, end_time, status, created_at) VALUES
-    (2221, '图书馆蓝灰层次周', '内容专题', 2201, DATE_SUB(NOW(), INTERVAL 6 DAY), DATE_ADD(NOW(), INTERVAL 8 DAY), 1, DATE_SUB(NOW(), INTERVAL 6 DAY)),
-    (2222, '新生衣橱轻改造', '品牌联动', 2201, DATE_SUB(NOW(), INTERVAL 3 DAY), DATE_ADD(NOW(), INTERVAL 12 DAY), 1, DATE_SUB(NOW(), INTERVAL 3 DAY)),
-    (2223, '地铁到教室通勤专题', '内容专题', 2202, DATE_SUB(NOW(), INTERVAL 5 DAY), DATE_ADD(NOW(), INTERVAL 9 DAY), 1, DATE_SUB(NOW(), INTERVAL 5 DAY)),
-    (2224, '实习季柔和针织联动', '品牌联动', 2202, DATE_SUB(NOW(), INTERVAL 2 DAY), DATE_ADD(NOW(), INTERVAL 14 DAY), 1, DATE_SUB(NOW(), INTERVAL 2 DAY)),
-    (2225, '社团招新活力穿搭周', '活动联名', 2203, DATE_SUB(NOW(), INTERVAL 4 DAY), DATE_ADD(NOW(), INTERVAL 7 DAY), 1, DATE_SUB(NOW(), INTERVAL 4 DAY)),
-    (2226, '奶杏色约会灵感册', '选题储备', 2204, DATE_ADD(NOW(), INTERVAL 1 DAY), DATE_ADD(NOW(), INTERVAL 15 DAY), 0, NOW());
 
 INSERT INTO creator_cooperation (id, user_id, merchant_id, cooperation_title, cooperation_status, reward_amount, created_at) VALUES
     (2231, 4, 2201, '图书馆学院风共创排期', 1, 168.00, DATE_SUB(NOW(), INTERVAL 10 DAY)),

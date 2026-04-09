@@ -105,15 +105,15 @@ INSERT INTO post_tag (id, post_id, tag_type, tag_value, created_at) VALUES
     (1118, 106, 'highlight', '理工日常', NOW());
 
 INSERT INTO product_link (
-    id, post_id, product_name, platform_name, product_url, link_status, is_partner_product,
-    commission_rate, price_amount, profit_label, guide_tip, last_checked_at, created_at
+    id, post_id, product_name, platform_name, product_url, link_status,
+    price_amount, profit_label, guide_tip, created_at
 ) VALUES
-    (1201, 101, '蓝灰学院风三件套', '淘宝 / 天猫', 'https://s.taobao.com/search?q=%E8%93%9D%E7%81%B0%20%E5%AD%A6%E9%99%A2%E9%A3%8E%20%E8%A1%AC%E8%A1%AB%20%E9%92%88%E7%BB%87%20%E5%8D%8A%E8%A3%99', 1, 1, 7.50, 139.00, '导购点击会进入创作者激励统计。', '适合教室和图书馆高频切换，优先看面料透气度。', NOW(), NOW()),
-    (1202, 102, '米杏通勤针织套装', '京东', 'https://search.jd.com/Search?keyword=%E7%B1%B3%E6%9D%8F%20%E9%92%88%E7%BB%87%20%E9%80%9A%E5%8B%A4%20%E7%9B%B4%E7%AD%92%E8%A3%A4', 1, 1, 6.00, 179.00, '通勤类内容会计入平台导购分析。', '如果要坐地铁和走校园长路，建议优先选轻薄针织。', NOW(), NOW()),
-    (1203, 103, '社团活动运动混搭套装', '淘宝 / 天猫', 'https://s.taobao.com/search?q=%E7%A4%BE%E5%9B%A2%20%E6%B4%BB%E5%8A%A8%20%E8%BF%90%E5%8A%A8%E6%B7%B7%E6%90%AD', 1, 1, 6.80, 199.00, '合作活动内容会额外进入热度评估。', '招新和摆摊类场景优先考虑活动量与耐脏度。', NOW(), NOW()),
-    (1204, 104, '奶杏色约会搭配套装', '淘宝 / 天猫', 'https://s.taobao.com/search?q=%E5%A5%B6%E6%9D%8F%E8%89%B2%20%E7%BA%A6%E4%BC%9A%20%E8%BF%9E%E8%A1%A3%E8%A3%99%20%E5%BC%80%E8%A1%AB', 1, 0, 6.20, 188.00, '这类温柔风内容适合做高收藏转化。', '如果要拍照，建议优先看裙长和开衫版型。', NOW(), NOW()),
-    (1205, 105, '预算友好教室通勤套装', '拼多多', 'https://mobile.yangkeduo.com/search_result.html?search_key=%E7%99%BDT%20%E7%89%9B%E4%BB%94%E8%A3%A4%20%E5%B8%86%E5%B8%83%E9%9E%8B%20%E5%AD%A6%E7%94%9F', 1, 1, 5.50, 128.00, '学生预算型内容会重点看收藏和复穿反馈。', '高频通勤优先买最容易重复搭配的单品。', NOW(), NOW()),
-    (1206, 106, '理工通勤机能组合', '京东', 'https://search.jd.com/Search?keyword=%E6%9C%BA%E8%83%BD%20%E9%80%9A%E5%8B%A4%20%E8%83%8C%E5%8C%85%20%E5%B7%A5%E8%A3%85%E8%A3%A4', 1, 1, 6.50, 239.00, '功能性内容会进入商家扶持计划观察池。', '背电脑和实验资料时，优先看背包分区和外套重量。', NOW(), NOW());
+    (1201, 101, '蓝灰学院风三件套', '淘宝 / 天猫', 'https://s.taobao.com/search?q=%E8%93%9D%E7%81%B0%20%E5%AD%A6%E9%99%A2%E9%A3%8E%20%E8%A1%AC%E8%A1%AB%20%E9%92%88%E7%BB%87%20%E5%8D%8A%E8%A3%99', 1, 139.00, '导购点击会进入创作者激励统计。', '适合教室和图书馆高频切换，优先看面料透气度。', NOW()),
+    (1202, 102, '米杏通勤针织套装', '京东', 'https://search.jd.com/Search?keyword=%E7%B1%B3%E6%9D%8F%20%E9%92%88%E7%BB%87%20%E9%80%9A%E5%8B%A4%20%E7%9B%B4%E7%AD%92%E8%A3%A4', 1, 179.00, '通勤类内容会计入平台导购分析。', '如果要坐地铁和走校园长路，建议优先选轻薄针织。', NOW()),
+    (1203, 103, '社团活动运动混搭套装', '淘宝 / 天猫', 'https://s.taobao.com/search?q=%E7%A4%BE%E5%9B%A2%20%E6%B4%BB%E5%8A%A8%20%E8%BF%90%E5%8A%A8%E6%B7%B7%E6%90%AD', 1, 199.00, '合作活动内容会额外进入热度评估。', '招新和摆摊类场景优先考虑活动量与耐脏度。', NOW()),
+    (1204, 104, '奶杏色约会搭配套装', '淘宝 / 天猫', 'https://s.taobao.com/search?q=%E5%A5%B6%E6%9D%8F%E8%89%B2%20%E7%BA%A6%E4%BC%9A%20%E8%BF%9E%E8%A1%A3%E8%A3%99%20%E5%BC%80%E8%A1%AB', 1, 188.00, '这类温柔风内容适合做高收藏转化。', '如果要拍照，建议优先看裙长和开衫版型。', NOW()),
+    (1205, 105, '预算友好教室通勤套装', '拼多多', 'https://mobile.yangkeduo.com/search_result.html?search_key=%E7%99%BDT%20%E7%89%9B%E4%BB%94%E8%A3%A4%20%E5%B8%86%E5%B8%83%E9%9E%8B%20%E5%AD%A6%E7%94%9F', 1, 128.00, '学生预算型内容会重点看收藏和复穿反馈。', '高频通勤优先买最容易重复搭配的单品。', NOW()),
+    (1206, 106, '理工通勤机能组合', '京东', 'https://search.jd.com/Search?keyword=%E6%9C%BA%E8%83%BD%20%E9%80%9A%E5%8B%A4%20%E8%83%8C%E5%8C%85%20%E5%B7%A5%E8%A3%85%E8%A3%A4', 1, 239.00, '功能性内容会进入商家扶持计划观察池。', '背电脑和实验资料时，优先看背包分区和外套重量。', NOW());
 
 INSERT INTO post_like (id, post_id, user_id, created_at) VALUES
     (1401, 101, 5, DATE_SUB(NOW(), INTERVAL 20 HOUR)),

@@ -15,10 +15,10 @@ SET @user_chen = LAST_INSERT_ID();
 DELETE FROM user_profile WHERE user_id = @user_chen;
 INSERT INTO user_profile (
     user_id, school_name, grade_name, signature, avatar_text, avatar_class,
-    cover_image_url, gender, email, location_name, like_count, follower_count, following_count, created_at, updated_at
+    cover_image_url, gender, email, location_name, created_at, updated_at
 ) VALUES (
     @user_chen, '东华大学', '大三', '记录通勤和图书馆场景里最耐看的学院风搭配。', '陈', 'soft',
-    NULL, 'female', 'zhixia.chen@campusfit.demo', '上海 长宁', 0, 0, 0, NOW(), NOW()
+    NULL, 'female', 'zhixia.chen@campusfit.demo', '上海 长宁', NOW(), NOW()
 );
 DELETE FROM message_notification WHERE user_id = @user_chen;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
@@ -38,10 +38,10 @@ SET @user_zhou = LAST_INSERT_ID();
 DELETE FROM user_profile WHERE user_id = @user_zhou;
 INSERT INTO user_profile (
     user_id, school_name, grade_name, signature, avatar_text, avatar_class,
-    cover_image_url, gender, email, location_name, like_count, follower_count, following_count, created_at, updated_at
+    cover_image_url, gender, email, location_name, created_at, updated_at
 ) VALUES (
     @user_zhou, '上海体育大学', '大二', '偏爱运动混搭和社团活动当天能直接照着穿的组合。', '周', 'alt',
-    NULL, 'male', 'yuchuan.zhou@campusfit.demo', '上海 杨浦', 0, 0, 0, NOW(), NOW()
+    NULL, 'male', 'yuchuan.zhou@campusfit.demo', '上海 杨浦', NOW(), NOW()
 );
 DELETE FROM message_notification WHERE user_id = @user_zhou;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
@@ -61,10 +61,10 @@ SET @user_lin = LAST_INSERT_ID();
 DELETE FROM user_profile WHERE user_id = @user_lin;
 INSERT INTO user_profile (
     user_id, school_name, grade_name, signature, avatar_text, avatar_class,
-    cover_image_url, gender, email, location_name, like_count, follower_count, following_count, created_at, updated_at
+    cover_image_url, gender, email, location_name, created_at, updated_at
 ) VALUES (
     @user_lin, '华东理工大学', '研一', '喜欢把基础款和低饱和配色穿出一点温柔层次。', '林', 'soft',
-    NULL, 'female', 'wancheng.lin@campusfit.demo', '上海 徐汇', 0, 0, 0, NOW(), NOW()
+    NULL, 'female', 'wancheng.lin@campusfit.demo', '上海 徐汇', NOW(), NOW()
 );
 DELETE FROM message_notification WHERE user_id = @user_lin;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
@@ -84,10 +84,10 @@ SET @user_xu = LAST_INSERT_ID();
 DELETE FROM user_profile WHERE user_id = @user_xu;
 INSERT INTO user_profile (
     user_id, school_name, grade_name, signature, avatar_text, avatar_class,
-    cover_image_url, gender, email, location_name, like_count, follower_count, following_count, created_at, updated_at
+    cover_image_url, gender, email, location_name, created_at, updated_at
 ) VALUES (
     @user_xu, '上海师范大学', '大四', '做预算友好的教室通勤穿搭，也会分享实习日常。', '许', 'soft',
-    NULL, 'female', 'jinan.xu@campusfit.demo', '上海 普陀', 0, 0, 0, NOW(), NOW()
+    NULL, 'female', 'jinan.xu@campusfit.demo', '上海 普陀', NOW(), NOW()
 );
 DELETE FROM message_notification WHERE user_id = @user_xu;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
@@ -107,10 +107,10 @@ SET @user_song = LAST_INSERT_ID();
 DELETE FROM user_profile WHERE user_id = @user_song;
 INSERT INTO user_profile (
     user_id, school_name, grade_name, signature, avatar_text, avatar_class,
-    cover_image_url, gender, email, location_name, like_count, follower_count, following_count, created_at, updated_at
+    cover_image_url, gender, email, location_name, created_at, updated_at
 ) VALUES (
     @user_song, '同济大学', '研二', '更关注功能性单品和通勤背包，偏理工科审美。', '宋', 'alt',
-    NULL, 'male', 'xubai.song@campusfit.demo', '上海 杨浦', 0, 0, 0, NOW(), NOW()
+    NULL, 'male', 'xubai.song@campusfit.demo', '上海 杨浦', NOW(), NOW()
 );
 DELETE FROM message_notification WHERE user_id = @user_song;
 INSERT INTO message_notification (user_id, message_type, title, content, read_status, created_at)
